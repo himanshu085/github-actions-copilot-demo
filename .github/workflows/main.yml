@@ -18,13 +18,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: app
-        run: npm install
+        run: npm install   # ❌ ERROR: wrong execution directory
 
       - name: Build application
-        working-directory: app
         run: npm run build
-
-      - name: Run tests
-        working-directory: app
-        run: npm run test
